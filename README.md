@@ -4,8 +4,6 @@
 
 
 | [Features][] | [Requirements][] | [Install][] | [How to setting][] | [Contributors][] |
-|---|---|---|---|---|---|
-
 ## Features 
 
 Admin
