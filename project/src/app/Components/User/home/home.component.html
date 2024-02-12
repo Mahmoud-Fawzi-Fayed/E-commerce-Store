@@ -1,0 +1,31 @@
+<section class="mb-5" style="margin-top: 0;">
+  <img style="filter: brightness(70%);" src="../../../../assets/images/background.jpg" alt="" class="w-100 img-fluid">
+</section>
+<section class="text-center mt-5 mb-5">
+  <h2>Our Products</h2>
+</section>
+<div class="container filteration mt-5 mb-5"></div>
+<section class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+      <select (change)="onSortDirection()" [(ngModel)]='SortbyParam' class="form-control">
+        <option disabled value="">Sort by price</option>
+        <option *ngIf="SortDirection==='asc' ? 'desc' :'asc'" value="price">High to Low</option>
+        <option *ngIf="SortDirection==='asc' ? 'desc' :'asc'" value="price">Low to High</option>
+      </select>
+    </div> 
+    <div class="col-xl-4 col-lg-4 col-md-6 col-6">
+      <input type="search" name="search" placeholder="Search by name" (input)="search()" [(ngModel)]="title" id="" class="form-control">
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="row">
+    <div class="col-xl-4 col-lg-6 col-md-12 col-12 p-2" *ngFor="let product of products | paginate: { itemsPerPage: 12, currentPage: page, totalItems: total } | sort:[SortbyParam, SortDirection]">
+      <app-product-item [product]="product" (item)="addtocart($event)"></app-product-item>
+    </div>
+  </div>
+</section>
+
+<pagination-controls class="text-center" (pageChange)="pageChangeEvent($event)"></pagination-controls>

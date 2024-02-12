@@ -1,0 +1,23 @@
+.navbar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  /* Add the following styles for transparent navbar */
+  .navbar {
+    background-color: transparent !important;
+    backdrop-filter: blur(5px); /* Add a backdrop filter for a blurred effect */
+  }
+
+  .navbar-brand{
+    font-size: 25px;
+    font-weight: 600;
+    margin-right: 50px;
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  /* Adjust other styles as needed */
+  

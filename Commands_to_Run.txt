@@ -1,0 +1,24 @@
+in MySql Server :-
+
+mysql -u root -p
+
+CREATE DATABASE BizNex;
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'BizNex';
+
+GRANT ALL PRIVILEGES ON laravel.* TO 'root'@'localhost';
+
+FLUSH PRIVILEGES;
+
+______________________________________________________________
+
+php artisan migrate   -->  this command create tables in DB
+
+php artisan db:seed --class=ProductSeeder --> put products.sql in the product table in DB
+
+php artisan key:generate
+
+php artisan storage:link
+
+php artisan serve --> For Running
+
