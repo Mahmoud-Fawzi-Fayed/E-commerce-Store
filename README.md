@@ -2,9 +2,6 @@
 
 ## Angular Laravel Ecommerce Platform
 
-
-Live Video : https://drive.google.com/drive/folders/1mDSvVmzYDoL8OaiNE-Z4VIG1ezNzy6A2?usp=sharing
-
 | [Features][] | [Requirements][] | [Install][] | [How to setting][] | [Contributors][] | [License][] |
 |---|---|---|---|---|---|
 
